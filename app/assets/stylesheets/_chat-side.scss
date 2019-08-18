@@ -1,0 +1,99 @@
+.chat-side {
+  width: 300px;
+  color: white;
+  float: left;
+  
+  .side-header {
+    background-color: #253141;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    &__box {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+    }
+
+
+
+    &__box__menu__edit-user{
+      margin-left: 0.3rem;
+    }
+
+    &__menu li {
+      margin-left: 0.3rem;
+      &__new-group {
+        display: flex;
+      }
+      &__edit-user{
+      }
+    }
+  }
+  
+  
+  
+  ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+  }
+  ol, ul {
+    display: flex;
+    list-style: none;
+  }  
+    
+}
+  .chat-side .groups {
+    height: calc(100vh - 100px);
+    background-color: #2f3e51;
+    padding: 20px 20px 0;
+    overflow: scroll;
+
+
+    
+    .chat-side .groups .group__latest-message {
+      font-size: 11px;
+    }
+
+    .chat-side .groups .group__latest-message {
+      font-size: 11px;
+    }
+    
+    .chat-side a {
+      color: white;
+    }
+    
+    
+  }
+
+  .chat-side .groups .group__latest-message {
+    font-size: 11px;
+  }
+
+  .chat-side a {
+    color: white;
+  }
+
+  a {
+    text-decoration: none;
+  }
+  .chat-side .groups .group__group-name {
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+  .chat-side .groups .group {
+    margin-bottom: 40px;
+  }
+  
+  body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+  }
