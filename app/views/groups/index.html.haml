@@ -30,25 +30,4 @@
                   .group__name
                     = group.name
                   .group__message
-                    = group.show_last_message
-      .chat-main
-        .main-header
-          .main-header__left-box
-            %h2.main-header__left-box__current-group{"data-group_id": "3205"}
-              krkgroup
-            %ul.main-header__left-box__member-list
-              Member：
-              %li.main-header__left-box__member-list__member miwa
-              %li.main-header__left-box__member-list__member kuroki
-          = link_to edit_group_path(@group) do
-            .main-header__edit-btn Edit
-        .messages
-          = render @messages
-        .form
-          = form_for [@group, @message] do |f|
-            .input-box
-              = f.text_field :content, class: 'input-box__text', placeholder: 'type a message'
-              %label.input-box__image{for: 'message_image'}
-                = fa_icon 'picture-o', class: 'fa.fa-image'
-                = f.file_field :image, class: 'input-box__image__file'
-            = f.submit 'Send', class: 'submit-btn'
+                    メッセージはまだありません。
