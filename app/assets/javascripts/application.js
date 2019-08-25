@@ -14,15 +14,3 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-
-
-// let btn = document.querySelector("submit-btn");
-
-// btn.addEventListener("click", function(){
-//   console.log("Hello world");
-// });
-// ボタンのDOMオブジェクトであるbtnに対して、
-// clickイベントとprintHello関数を紐付ける仕組みであるイベントリスナを追加する
-
-// window.addEventListener("load", printHelloWithButton);
-// ページの読み込みを先に行う記述を追記
