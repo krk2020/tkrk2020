@@ -1,6 +1,5 @@
 $(function(){
   function buildPost(post){
-    console.log(post.image)
     var imagefile = post.image.url? `<img src="${post.image.url}" lower-message__image">` : ``;
     var html = `<div class="message">
                   <div class="upper-message">
