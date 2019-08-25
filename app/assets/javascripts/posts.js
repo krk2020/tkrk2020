@@ -32,12 +32,12 @@ $(function(){
       contentType: false
     })
     .done(function(message){
-      console.log(message);
       var html = buildPost(message);
       $('.messages').append(html);
-      $('.input-box__text').val('');
       $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight });
-      $('.input-box__image__file').val('');
+      $("form")[0].reset();
+      
+      
     })
     .fail(function(){
       alert('error');

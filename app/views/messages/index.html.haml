@@ -24,12 +24,17 @@
   .chat-main
     .main-header
       .main-header__left-box
-        %h2.main-header__left-box__current-group{"data-group_id": "3205"}
-          krkgroup
+
+
+        %h2.main-header__left-box__current-group
+          =@group.name
         %ul.main-header__left-box__member-list
           Member：
-          %li.main-header__left-box__member-list__member miwa
-          %li.main-header__left-box__member-list__member kuroki
+          %li.main-header__left-box__member-list__name
+          -@group.group_users.each do |group_user|
+            = group_user.user.name
+
+
       = link_to edit_group_path(@group) do
         .main-header__edit-btn Edit
     .messages
