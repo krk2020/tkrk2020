@@ -1,20 +1,6 @@
-class Api::CommentsController < ApplicationController
+class Api::MessagesController < ApplicationController
   def index
-    @message = Message.new
-    @messages = Message.order('created_at ASC')
-  end
-
-  def create
-    @message = Message.new(todo_params)
-    if @message.save
-      redirect_to :root
-    else
-      render :index
-    end
-  end
-
-  private
-  def message_params
-    params.require(:todo).permit(:content)
+    @group = Group.find(params[:group_id])
+    @messages = @group.messages.includes(:user).where("id > ?", params[:id])
   end
 end
