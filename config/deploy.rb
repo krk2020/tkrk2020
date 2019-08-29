@@ -3,7 +3,7 @@
 lock '3.11.0'
 
 # set :application, "my_app_name"
-set :application, 'tkrk2020'
+set :application, 'chat-space'
 # set :repo_url, "git@example.com:me/my_repo.git"
 set :repo_url,  'git@github.com:krk2020/tkrk2020.git'
 
