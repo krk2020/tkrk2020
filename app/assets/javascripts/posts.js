@@ -1,6 +1,8 @@
 $(function(){
   
+
   function buildPost(post){
+    
     
     image = (post.image) ? `<img class= "lower-message__image" src=${post.image} >` : "";
     var html = `<div class="message" data-message-id="${post.id}">
@@ -42,11 +44,12 @@ $(function(){
       
       
     })
-    .fail(function(){
+    .fail(function(message){
       alert('error');
+      $("form").prop('disabled', false);
     })
-    .always(() => {
-      $('input').removeAttr("disabled");
+    .always(function() {
+      $("form").prop('disabled', false);
     })
   })
 
@@ -72,8 +75,12 @@ $(function(){
     })
     .fail(function() {
       alert('error');
-    });
+    })
+    .always(function(data){
+      $('.submit-btn').prop('disabled', false);　//ここで解除している
+    })
     }
   };
   setInterval(reloadMessages, 5000);
+  
 });
