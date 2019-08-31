@@ -36,17 +36,19 @@ $(function(){
       processData: false,
       contentType: false
     })
-    .done(function(message){
-      var html = buildPost(message);
+    .done(function(data){
+      var html = buildPost(data);
       $('.messages').append(html);
+      $('.input-box__text').val('');
       $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight });
       $("form")[0].reset();
       
       
     })
-    .fail(function(message){
+    .fail(function(data){
       alert('error');
-      $("form").prop('disabled', false);
+      
+      
     })
     .always(function() {
       $("form").prop('disabled', false);
@@ -73,7 +75,7 @@ $(function(){
       })
       $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
     })
-    .fail(function() {
+    .fail(function(messages) {
       alert('error');
     })
     .always(function(data){
