@@ -7,29 +7,37 @@
     background-color: #253141;
     height: 100px;
     display: flex;
+    line-height: 100px;
     align-items: center;
     padding: 0 20px;
+    font-weight: bold;
+    
     &__box {
+      
       display: flex;
       justify-content: space-between;
       width: 100%;
       font-weight: bold;
-      display: flex;
+      // display: flex;
       align-items: center;
-    }
+      font-size: 16px;
+    
 
 
 
-    &__box__menu__edit-user{
-      margin-left: 0.3rem;
-    }
-
-    &__menu li {
-      margin-left: 0.3rem;
-      &__new-group {
-        display: flex;
+      &__box__menu__edit-user{
+        margin-left: 0.3rem;
+        font-weight: bold;
       }
-      &__edit-user{
+      
+
+      .list {
+        margin-left: 0.3rem;
+        &__new-group {
+          display: flex;
+        }
+        &__edit-user{
+        }
       }
     }
   }
@@ -56,26 +64,43 @@
     background-color: #2f3e51;
     padding: 20px 20px 0;
     overflow: scroll;
+    .group{
+      box-sizing: border-box;
+      margin-bottom: 40px;;
+      &__name {
+        color: white;
+        font-size: 15px;
+      }
+      &__message {
+        color: white;
+        font-size: 11px;
+        margin-top: 5px;
 
-
-    
-    .chat-side .groups .group__latest-message {
-      font-size: 11px;
+      }
     }
-
-    .chat-side .groups .group__latest-message {
-      font-size: 11px;
-    }
-    
-    .chat-side a {
-      color: white;
-    }
-    
     
   }
 
+    
   .chat-side .groups .group__latest-message {
-    font-size: 11px;
+    // font-size: 11px;
+  }
+
+  .chat-side .groups .group__latest-message {
+    // font-size: 11px;
+  }
+  
+  .chat-side a {
+    color: white;
+  }
+  
+  .chat-side .groups .group {
+    // margin-bottom: 40px;
+  }
+
+
+  .chat-side .groups .group__latest-message {
+    // font-size: 11px;
   }
 
   .chat-side a {
@@ -86,14 +111,13 @@
     text-decoration: none;
   }
   .chat-side .groups .group__group-name {
-    font-size: 15px;
-    margin-bottom: 5px;
-  }
-  .chat-side .groups .group {
-    margin-bottom: 40px;
+    // font-size: 15px;
+    // margin-bottom: 5px;
   }
   
-  body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
-    margin: 0;
-    padding: 0;
-  }
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+  margin: 0;
+  padding: 0;
+  
+}
